@@ -1,0 +1,25 @@
+[2023-02-27T10:25:00.801+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: master_dag.sensor scheduled__2023-02-27T10:20:00+00:00 [queued]>
+[2023-02-27T10:25:00.811+0000] {taskinstance.py:1083} INFO - Dependencies all met for <TaskInstance: master_dag.sensor scheduled__2023-02-27T10:20:00+00:00 [queued]>
+[2023-02-27T10:25:00.812+0000] {taskinstance.py:1279} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-27T10:25:00.812+0000] {taskinstance.py:1280} INFO - Starting attempt 1 of 1
+[2023-02-27T10:25:00.813+0000] {taskinstance.py:1281} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-27T10:25:00.823+0000] {taskinstance.py:1300} INFO - Executing <Task(ExternalTaskSensor): sensor> on 2023-02-27 10:20:00+00:00
+[2023-02-27T10:25:00.829+0000] {standard_task_runner.py:55} INFO - Started process 7223 to run task
+[2023-02-27T10:25:00.833+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'master_dag', 'sensor', 'scheduled__2023-02-27T10:20:00+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/master_dag.py', '--cfg-path', '/tmp/tmps7stkxvu']
+[2023-02-27T10:25:00.834+0000] {standard_task_runner.py:83} INFO - Job 46: Subtask sensor
+[2023-02-27T10:25:00.905+0000] {task_command.py:388} INFO - Running <TaskInstance: master_dag.sensor scheduled__2023-02-27T10:20:00+00:00 [running]> on host f7c6263a9b51
+[2023-02-27T10:25:00.967+0000] {taskinstance.py:1509} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=master_dag
+AIRFLOW_CTX_TASK_ID=sensor
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-27T10:20:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-02-27T10:20:00+00:00
+[2023-02-27T10:25:00.968+0000] {external_task.py:209} INFO - Poking for tasks ['t1'] in dag slave_dag on 2023-02-27T10:20:00+00:00 ... 
+[2023-02-27T10:26:01.034+0000] {external_task.py:209} INFO - Poking for tasks ['t1'] in dag slave_dag on 2023-02-27T10:20:00+00:00 ... 
+[2023-02-27T10:26:01.053+0000] {base.py:228} INFO - Success criteria met. Exiting.
+[2023-02-27T10:26:01.067+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=master_dag, task_id=sensor, execution_date=20230227T102000, start_date=20230227T102500, end_date=20230227T102601
+[2023-02-27T10:26:01.100+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-02-27T10:26:01.130+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check

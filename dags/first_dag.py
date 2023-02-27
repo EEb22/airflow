@@ -1,8 +1,15 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator, BranchPythonOperator
 from airflow.operators.bash import BashOperator
+from airflow.models import Variable
 from datetime import datetime
 from random import randint
+
+
+def display_variable():
+    my_var = Variable.get("my_var")
+    print("variable: ", my_var)
+    return my_var
 
 
 def _training_model():
@@ -21,7 +28,12 @@ def _choose_best_model(ti):
     return 'inaccurate'
 
 
-with DAG("my_dag", start_date=datetime(2023, 1, 1),schedule_interval="@daily", catchup=False) as dag:
+with DAG("first_dag", start_date=datetime(2023, 1, 1),schedule_interval="@daily", catchup=False) as dag:
+
+    display_variable = PythonOperator(
+        task_id='display_variable',
+        python_callable=display_variable
+    )
 
     training_model_A = PythonOperator(
         task_id="training_model_A",
@@ -53,6 +65,6 @@ with DAG("my_dag", start_date=datetime(2023, 1, 1),schedule_interval="@daily", c
         bash_command="echo 'inaccurate'"
     )
 
-    [training_model_A, training_model_B, training_model_C] >> choose_best_model >> [accurate, inaccurate]
+    display_variable >> [training_model_A, training_model_B, training_model_C] >> choose_best_model >> [accurate, inaccurate]
 
 
