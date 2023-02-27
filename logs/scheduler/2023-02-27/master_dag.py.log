@@ -1239,3 +1239,10 @@ SyntaxError: keyword argument repeated
 [2023-02-27T10:10:55.647+0000] {logging_mixin.py:137} INFO - [2023-02-27T10:10:55.647+0000] {dag.py:2690} INFO - Sync 1 DAGs
 [2023-02-27T10:10:55.680+0000] {logging_mixin.py:137} INFO - [2023-02-27T10:10:55.680+0000] {dag.py:3441} INFO - Setting next_dagrun for master_dag to 2023-02-27T10:10:00+00:00, run_after=2023-02-27T10:15:00+00:00
 [2023-02-27T10:10:55.698+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/master_dag.py took 0.159 seconds
+[2023-02-27T10:11:25.974+0000] {processor.py:153} INFO - Started process (PID=6664) to work on /opt/airflow/dags/master_dag.py
+[2023-02-27T10:11:25.978+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/master_dag.py for tasks to queue
+[2023-02-27T10:11:25.980+0000] {logging_mixin.py:137} INFO - [2023-02-27T10:11:25.980+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/master_dag.py
+[2023-02-27T10:11:26.011+0000] {processor.py:753} INFO - DAG(s) dict_keys(['master_dag']) retrieved from /opt/airflow/dags/master_dag.py
+[2023-02-27T10:11:26.036+0000] {logging_mixin.py:137} INFO - [2023-02-27T10:11:26.036+0000] {dag.py:2690} INFO - Sync 1 DAGs
+[2023-02-27T10:11:26.059+0000] {logging_mixin.py:137} INFO - [2023-02-27T10:11:26.059+0000] {dag.py:3441} INFO - Setting next_dagrun for master_dag to 2023-02-27T10:10:00+00:00, run_after=2023-02-27T10:15:00+00:00
+[2023-02-27T10:11:26.072+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/master_dag.py took 0.106 seconds

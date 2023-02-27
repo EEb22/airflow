@@ -18,3 +18,8 @@ AIRFLOW_CTX_EXECUTION_DATE=2023-02-27T10:05:00+00:00
 AIRFLOW_CTX_TRY_NUMBER=1
 AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-02-27T10:05:00+00:00
 [2023-02-27T10:10:01.443+0000] {external_task.py:209} INFO - Poking for tasks ['t1'] in dag slave_dag on 2023-02-27T10:05:00+00:00 ... 
+[2023-02-27T10:11:01.519+0000] {external_task.py:209} INFO - Poking for tasks ['t1'] in dag slave_dag on 2023-02-27T10:05:00+00:00 ... 
+[2023-02-27T10:11:01.559+0000] {base.py:228} INFO - Success criteria met. Exiting.
+[2023-02-27T10:11:01.578+0000] {taskinstance.py:1323} INFO - Marking task as SUCCESS. dag_id=master_dag, task_id=sensor, execution_date=20230227T100500, start_date=20230227T101001, end_date=20230227T101101
+[2023-02-27T10:11:01.642+0000] {local_task_job.py:208} INFO - Task exited with return code 0
+[2023-02-27T10:11:01.689+0000] {taskinstance.py:2578} INFO - 1 downstream tasks scheduled from follow-on schedule check
